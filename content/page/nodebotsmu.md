@@ -2,6 +2,7 @@
 title: Nodebots Mauritius
 subtitle: Learn how to make robots powered by JavaScript and More
 comments: false
+type : page
 ---
 
 Nodebots Mauritius is a meetup for hobbyists, hackers, makers and hardware enthusiasts. Nodebots are robots powered by NodeJS and Javascript, but we welcome anyone to wants to work on different platforms!
