@@ -1,11 +1,22 @@
 ---
 title: "Explore OpenData on data.govmu.org using R"
 date: 2018-05-07T15:02:31+04:00
+image: /img/opendata-dkanr/opendata-portal-mu.png
+categories:
+- blog
+tags:
+- OpenData
+- R
+- DKAN
+layout: post
+description: A guide to exploring data on open data platform powered by DKAN, using dkanr package and the R programming language 
+author: rahul
+externalLink: false
 ---
 
-The National Computer Board(NCB) of Mauritius recently announced the Open Data Mauritius portal. It contains 100 datasets on topics such as Agriculture, Crime, Justice and Security, Health and Tourism. The portal is powered by the DKAN Open Data Platform, which is a community-driven, free and open source open data platform that gives organizations and individuals ultimate freedom to publish and consume structured information[1]. 
+The National Computer Board(NCB) of Mauritius recently announced the Open Data Mauritius portal[^1]. It contains 100 datasets on topics such as Agriculture, Crime, Justice and Security, Health and Tourism. The portal is powered by the DKAN Open Data Platform[^2], which is a community-driven, free and open source open data platform that gives organizations and individuals ultimate freedom to publish and consume structured information. 
 
-DKAN includes a number of APIs to allow it to communicate with external applications[2]. In this guide we are going to use the `dkanr` package, which is an R client for the DKAN REST API, to explore data on Open Data platforms powered by DKAN.  
+DKAN includes a number of APIs[^3] to allow it to communicate with external applications. In this guide we are going to use the `dkanr`[^4] package, which is an R client for the DKAN REST API, to explore data on Open Data platforms powered by DKAN.  
 
 ## Prerequisites
 
@@ -22,7 +33,7 @@ We will use the `purrr`, `dplyr` , `stringr` and `dkanr` packages. Install them 
 install.packages(c("purrr","dplyr","dkanr","stringr"))
 ``` 
 
-## Setup and Establish connection with `data.govmu.org`
+## Setup and Establish connection with data.govmu.org
 
 First import the necessary libraries and then set up a connection without using authentication.
 
@@ -77,7 +88,6 @@ Viewing the datasets gives the following output
 10 495   965   datas~ und      Number of~ 6     1      152422~ 152423~ 0      
 # ... with 90 more rows, and 6 more variables: promote <chr>, sticky <chr>,
 #   tnid <chr>, translate <chr>, uuid <chr>, uri <chr>
-
 ```
 
 We can see there are 100 entries (100 datasets) with 16 metadata fields. Use the following command to display dataset with relevant metadata:
@@ -87,9 +97,22 @@ We can see there are 100 entries (100 datasets) with 16 metadata fields. Use the
 names(datasets)
 
 #show all titles available
-
 datasets$title 
-
+  [1] "List of Sports Federation in Mauritius"                                                                                           
+  [2] "List of Secondary Schools in Rodrigues"                                                                                           
+  [3] "List of Primary Schools in Rodrigues"                                                                                             
+  [4] "List of Primary Schools in Mauritius"                                                                                             
+  [5] "List of Secondary Schools in Mauritius"                                                                                           
+  [6] "List of Youth Centres in Mauritius"                                                                                               
+  [7] "List of Police Stations in Mauritius"                                                                                             
+  [8] "Primary Enrolment and Gross Enrolment Ratio1 by sex, Island of Mauritius"                                                         
+  [9] "Number of primary schools, pupils, personnel and pupil/teacher ratio, Republic of Mauritius, 1967 - 2016\t\t"                     
+ [10] "Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex"                                                        
+ [11] "New Admissions on Tertiary Education Level Programmes by source"                                                                  
+ [12] "Gross Tertiary Enrolment Rate (GTER) in Tertiary Education by sex, 2000 - 2015"                                                   
+ [13] "Enrolment of International Students in Tertiary Education locally by sex"                                                         
+ [14] "Enrolment in Special Education needs in schools - Island of Mauritius, Island of Rodrigues & Republic of Mauritius, 2010 - 2016"  
+... truncated
 ```
 
 ## Exploring a particular dataset
@@ -99,23 +122,20 @@ Once you have identified a particular dataset you are interested in exploring, y
 ```R
 #find datasets which contain a particular string in title
 
-# prints rows containing word "Education" in title
+#prints rows containing word "Education" in title
 datasets %>%
      filter(str_detect(title,"Education")) %>%
      select(nid,title)
-
 ```
 
 After identifying the `nid`, you can retrieve the metadata of the particular dataset. For instance, for the dataset "Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex", the **dataset** `nid` is 495:
 
 ```R
-# retrieve metadata for the dataset
-
+#retrieve metadata for the dataset
 metadata <- retrieve_node(nid ='495', as = 'list')
 
 #display all attributes available
 names(metadata)
-
 ```
 ## Explore a specific resource
 
@@ -127,10 +147,10 @@ get_resource_nids(metadata)
 ```
 
 ```R
-# two resources are available for the dataset
+#two resources are available for the dataset
 [1] "496" "497"
 
-# get resources metadata
+#get resources metadata
 resource <- retrieve_node(nid ='496', as = 'list')
 resource2 <- retrieve_node(nid ='497', as = 'list')
 
@@ -148,7 +168,6 @@ resource2
   Title: METADATA - Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015
   UUID: b94db7c8-a487-46b4-ac98-6dff6253ff10
   Created/Modified: 1524222788 / 1524222788
-
 ```
 
 Once we have the required resources, we can download the data. We are interested in resource `#496`, "DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015".
@@ -156,41 +175,38 @@ Once we have the required resources, we can download the data. We are interested
 Data can be downloaded either using the resource url or via the DKAN Datastore API. 
 
 ```R
-# check if data required is available in datastore
+#check if data required is available in datastore
 ds_is_available(resource)
 
 ## [1] FALSE
-
 ```
 Unfortunately, the requested resource is not available in the DKAN datastore. We proceed by downloading the resource using the url.
 
 ```R
-# retrieve the resource url from the resource metadata
+#retrieve the resource url from the resource metadata
 resource_url <- get_resource_url(resource)
 
 ##[1] "https://data.govmu.org/dkan//sites//default//files//DATA-Number of Mauritian Students Pursuing  Tertiary Education Overseas by sex, 2000 - 2015.csv"
-
 ```
 The `resource_url` is a string and needs to be encoded to a URL. You can then use the `read.csv2` function to load the data from the url.
 
 ```R
-# encode url
+#encode url
 resource_url_encoded <- URLencode(resource_url)
 
 # "https://data.govmu.org/dkan//sites//default//files//DATA-Number%20of%20Mauritian%20Students%20Pursuing%20%20Tertiary%20Education%20Overseas%20by%20sex,%202000%20-%202015.csv"
 
-# load data
+#load data
 resource_data <- read.csv2(resource_url_encoded,sep=',',header = TRUE)
 
 #show first 10 rows
 head(resource_data,10)
-
 ```
 ## Play with data
 
 After downloading the data, you can start exploring it.
 
-```
+```R
 mean(resource_data$Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Male)
 
 max(resource_data$Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total)
@@ -199,29 +215,25 @@ max(resource_data$Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Over
 You can use the `plot()` function to draw charts. For the above resource, you can plot a line chart with "Year" as x-axis and "Total number of Students(both sex)" as y-axis.
 
 ```R
-
-# plot a line chart
+#plot a line chart
 
 plot(resource_data$Year,resource_data$Number.of.Mauritian.Students.Pursuing.Tertiary.Education..Overseas.Total, type = "o", xlab = "Year", ylab = "Total number of students")
 
-# give the chart a title
-title(main = "Number of Mauritian Students(Both Sex)\nPursuing Tertiary Education Overseas, 2000-2015")
-
-
+#give the chart a title
+title(main = "Number of Mauritian Students(Both Sexes)\nPursuing Tertiary Education Overseas, 2000-2015", sub="Source:data.govmu.org", cex.sub = 0.75, font.sub = 3) 
 ```  
 <div align="center">
-<p><img src="/img/opendata-dkanr/opendata-dkanr.png" alt="line chart visualisation"></p> 
+<p><img src="/img/opendata-dkanr/opendata-dkanr-annotation.png" alt="line chart visualisation"></p> 
  </div>
 
 ## Wrap up
 Data from Open Data Mauritius portal can be loaded directly into R using the `dkanr` package. You can manipulate, visualise or analyse the data. The possibilities are endless.
 
 
-## Resources
-https://cran.r-project.org/web/packages/dkanr/README.html
+[^1]: [Open Data Mauritius](https://data.govmu.org/dkan/)
+[^2]: [DKAN Open Data Platform](https://getdkan.org/)
+[^3]: [DKAN API Guide](https://docs.getdkan.com/en/latest/apis/index.html)
+[^4]: [Getting Started with `dkanr`](https://cran.r-project.org/web/packages/dkanr/vignettes/getting_started_with_dkanr.html)
 
-https://cran.r-project.org/web/packages/dkanr/vignettes/getting_started_with_dkanr.html
 
-https://getdkan.org/
 
-https://docs.getdkan.com/en/latest/

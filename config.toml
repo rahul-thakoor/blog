@@ -2,7 +2,7 @@ baseURL = "https://rahul-thakoor.github.io"
 
 languageCode = "en-us"
 title = "rahul thakoor"
-subtitle = "blog{OSS, Physical Computing, Data}"
+#subtitle = "blog{OSS, Physical Computing, Data}"
 theme = "beautiful-hugo"
 metaDataFormat = "yaml"
 pygmentsStyle = "trac"
