@@ -1,5 +1,5 @@
 ---
-title: Rust - Raw string literals
+title: "Rust: Raw string literals"
 subtitle: r#"What is this?"#
 date: 2018-06-29T22:45:43+04:00
 draft: false
@@ -46,12 +46,22 @@ The raw string body can contain any sequence of UNICODE characters except `"#` s
 <script src="https://gist.github.com/rahul-thakoor/2dc72c16c57c4fd594bb648bd30452a4.js"></script>
 <a href="https://play.rust-lang.org/?gist=2dc72c16c57c4fd594bb648bd30452a4" target="_blank">Try it on playpen</a>
 
-Likewise, if `"##` is to be included, you can add another `#` to the starting and ending delimiters. 
+Likewise, if `"##` is to be included, you can add another `#` to the starting and ending delimiters.  
 
-## Summary
+## Wrap Up
 
-This article briefly covers what raw string literals are and what makes valid raw string literals.
+Raw string literals are helpful when you need to avoid escaping characters within a literal. The characters in a raw string represent themselves. _Informally, a raw string literal is an r, followed by N hashes (where N can be zero), a quote, any characters, then a quote followed by N hashes._[^6] 
 
+Here's how visualising[^7] raw string literals works for me:
+
+<figure>
+  <img src="/img/rust_raw_string.png" alt="Raw string literal railroad" style="width:100%">
+  <figcaption style="font-size:12px;text-align:right">Image generated using Railroad-Diagram-Generator</figcaption>
+</figure>
+
+
+
+That's it for now! 
 
 
 
@@ -67,4 +77,6 @@ This article briefly covers what raw string literals are and what makes valid ra
 [^5]: https://github.com/serde-rs/json
 
 [^6]: https://github.com/rust-lang/rust/blob/master/src/grammar/raw-string-literal-ambiguity.md
+
+[^7]: http://www.bottlecaps.de/rr/ui
 
