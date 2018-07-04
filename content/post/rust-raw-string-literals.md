@@ -2,7 +2,7 @@
 title: Rust - Raw string literals
 subtitle: r#"What is this?"#
 date: 2018-06-29T22:45:43+04:00
-draft: true
+draft: false
 tags:
 - rust
 ---
