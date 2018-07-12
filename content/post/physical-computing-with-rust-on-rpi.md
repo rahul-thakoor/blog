@@ -94,7 +94,7 @@ As I learn more about Rust, I will continue to improve the `rust_gpio` crate and
 
 3. Implement SPI devices API
 
-> Thank you so much for reading. A big thank you goes to [Ashley Williams](https://twitter.com/ag_dubs) for proofreading.
+> Thank you so much for reading. A big thank you goes to [Ashley Williams](https://twitter.com/ag_dubs), [@terkwood](https://twitter.com/terkwood) and [Jonathan Pallant](https://twitter.com/therealjpster) for their invaluable feedbacks.
 
 
 [^1]: https://crates.io/crates/rust_gpiozero
