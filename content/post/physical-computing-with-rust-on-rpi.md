@@ -1,7 +1,7 @@
 ---
 title: "Physical Computing With Rust On Raspberry Pi"
 subtitle: "Use Rust to control LEDs, Buzzers, and more with the Raspberry Pi"
-image: /img/physical-computing-rust-python-example.png
+image: /img/physical-computing-rust-example.png
 date: 2018-07-07T23:06:32+04:00
 draft: false
 ---
