@@ -21,7 +21,7 @@ After reading the first edition of The Rust Programming Language(TRPL) Book, I d
 
 ## Increasing Rust's Reach
 
-The program started on 14th May. I had one weekly call with Ashley and one with IRR's participants, mentors and the awesome guests from the Rust community. These were all put together by Ashley! Despite still having classes, I aimed to attend all the group meetings since they were very enriching and inspiring. I even attended one using cellular data while traveling on the bus on my way home! 
+The program started on 14th May. I had one weekly call with Ashley and one with IRR's participants, mentors and the awesome guests from the Rust community. We had the unique opportunity to interact with guests like Steve Klabnik, Chris Krycho, Carol Nichols Goulding, Sergio Benitez, Santiago Pastorino and more (Sorry for not listing everyone, you are all awesome ❤️). These were all put together by Ashley! Despite still having classes, I aimed to attend all the group meetings since they were very enriching and inspiring. I even attended one using cellular data while traveling on the bus on my way home! 
 
 During the first few weeks, Ashley gave me the opportunity to further my knowledge in Rust. I started reading through the second edition of TRPL book. I decided to work on the **Physical Computing with Rust**[^10] tutorial which is based on the **Physical Computing with Python**[^11] by the Raspberry Pi Foundation and complemented `rust_gpiozero` project. This allowed me to write Rust for the tutorial itself, and also discover `mdbook`[^12]. I also researched and learnt about Internationalization (i18n) and Localization (L10n).
 
@@ -54,6 +54,8 @@ It was a wonderful experience participating in the IRR program and an absolute d
     - Making themes for mdbook
 3. Contribute in the Community Team[^21] and Rustbridge[^22] and build a Rust community in my country
 4. Understand ownership better and learn advanced topics like Macros, Concurrency, Smart Pointers and more
+
+And yes, I am looking forward to attending Rust Belt Rust 2018 in Ann Arbor, Michigan and finally meet some fellow _rustaceans_ in person.
 
 There is so much to learn and I, for one am eager to discover what lies ahead.
 
