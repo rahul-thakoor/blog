@@ -8,6 +8,8 @@ I recently had the privilege of participating the Increasing Rust's Reach(IRR) p
 
 The 2018 cohort included 14 participants[^2] , spanning 9 timezones and 11 countries! This year's projects included WebAssembly, `rust-lang.org`'s Design and Internationalisation(Internationalization), Embedded, Diesel, CLI and Clap-rs. I worked on the `rust-lang.org`'s Internationalisation along with Rui Zhao and mentored by Ashley Williams.
 
+![IRR 2018 Participant Map](/img/irr2018-particpant-map.png)
+
 This is my story of how I got into Rust, how the IRR program went and how I intend to keep contributing in the Rust community.
 
 ## How I got into Rust
@@ -33,7 +35,6 @@ Here are some more ideas I explored or technology I worked with during the progr
 - Fluent[^14]
 - Foreign Function Interface
 - Cross compilation for the Raspberry Pi
-- Constructionism, Logo and research by Seymour Papert
 - Making a tool for making publishing crates easier
 - Webassembly
 - Rocket[^15]
