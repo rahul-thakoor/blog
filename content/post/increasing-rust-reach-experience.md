@@ -1,27 +1,30 @@
 ---
 title: "My Experience in Increasing Rust's Reach 2018"
 date: 2018-09-16T08:49:37+04:00
-draft: true
+draft: false
+tags:
+- rust
+- rustreach
 ---
 
 I recently had the privilege of participating the Increasing Rust's Reach(IRR) program. The program aims to _grow Rust's community of project collaborators and leaders. Increasing Rust's Reach brings together Rust team members and individuals who are underrepresented in Rust's community and the tech industry for a partnership of three (3) months, from mid-May to mid-August. Each partnership agrees to a commitment of 3–5 hours per week working on a Rust Project._[^1]
 
-The 2018 cohort included 14 participants[^2] , spanning 9 timezones and 11 countries! This year's projects included WebAssembly, `rust-lang.org`'s Design and Internationalisation(Internationalization), Embedded, Diesel, CLI and Clap-rs. I worked on the `rust-lang.org`'s Internationalisation along with Rui Zhao and mentored by Ashley Williams.
+The 2018 cohort included 14 participants[^2] , spanning 9 timezones and 11 countries! This year's projects included WebAssembly, `rust-lang.org`'s Design and Internationalisation(Internationalization 😅), Embedded, Diesel, CLI and Clap-rs. I worked on the `rust-lang.org`'s Internationalisation along with [Rui Zhao](https://github.com/renyuneyun) and mentored by [Ashley Williams](https://twitter.com/ag_dubs).
 
 ![IRR 2018 Participant Map](/img/irr2018-particpant-map.png)
 
 This is my story of how I got into Rust, how the IRR program went and how I intend to keep contributing in the Rust community.
 
-## How I got into Rust
+## How I got into Rust 🦀
 How I got into programming itself and eventually Rust can be a post in itself. I started programming only three years ago(in 2015) while I was studying Medicine in China. I first tried and failed at learning Java on Udacity back in 2012. What followed were several enrollments in numerous courses on different MOOC platforms and eventually abandoning them. I really started learning it again when I bought my first Arduino in 2015. I enjoyed physical computing and learnt a lot by experimenting and building DIY projects. I also realised the importance of documenting and sharing my findings since I was myself learning from a myriad of open educational resources.[^3]
 
-Then in 2016, after completing my medical degree, I decided to officially learn computer science. I decided  to learn Rust after it was chosen as the Most Loved Language in the 2017 Stack Overflow Survey[^4] and _**discovering**_ Jorge Aparicio's book[^5].
+Then in 2016, after completing my medical degree, I decided to officially learn computer science. I decided  to learn Rust after it was chosen as the Most Loved Language in the 2017 Stack Overflow Survey[^4] and _**discovering**_ [Jorge Aparicio](https://twitter.com/japaricious)'s book[^5].
 
 After reading the first edition of The Rust Programming Language(TRPL) Book, I decided to start a project of my own to practice the concepts I was learning. Since I like working with microcontrollers and single board computers, I decided to port the awesome python based `GPIOZERO`[^6] library for the Raspberry Pi and made `rust_gpiozero`[^7]. After that I made a driver[^8] for the MMA7660FC 3-Axis Accelerometer based on `embedded-hal` by Jorge Aparicio. I also started contributing on the **Awesome Embedded Rust**[^9] list.
 
-## Increasing Rust's Reach
+## Increasing Rust's Reach 💯
 
-The program started on 14th May. I had one weekly call with Ashley and one with IRR's participants, mentors and the awesome guests from the Rust community. We had the unique opportunity to interact with guests like Steve Klabnik, Chris Krycho, Carol Nichols Goulding, Sergio Benitez, Santiago Pastorino and more (Sorry for not listing everyone, you are all awesome ❤️). These were all put together by Ashley! Despite still having classes, I aimed to attend all the group meetings since they were very enriching and inspiring. I even attended one using cellular data while traveling on the bus on my way home! 
+The program started on 14th May. I had one weekly call with Ashley and one with IRR's participants, mentors and the awesome guests from the Rust community. We had the unique opportunity to interact with guests like [Steve Klabnik](https://twitter.com/steveklabnik), [Chris Krycho](https://twitter.com/chriskrycho), [Carol Nichols Goulding](https://twitter.com/Carols10cents), [Sergio Benitez](https://sergio.bz/), [Santiago Pastorino](https://twitter.com/spastorino) and more (Sorry for not listing everyone, you are all awesome ❤️). These were all put together by Ashley! Despite still having classes, I aimed to attend all the group meetings since they were very enriching and inspiring. I even attended one using cellular data while traveling on the bus on my way home! 
 
 During the first few weeks, Ashley gave me the opportunity to further my knowledge in Rust. I started reading through the second edition of TRPL book. I decided to work on the **Physical Computing with Rust**[^10] tutorial which is based on the **Physical Computing with Python**[^11] by the Raspberry Pi Foundation and complemented `rust_gpiozero` project. This allowed me to write Rust for the tutorial itself, and also discover `mdbook`[^12]. I also researched and learnt about Internationalization (i18n) and Localization (L10n).
 
@@ -43,7 +46,7 @@ Here are some more ideas I explored or technology I worked with during the progr
 - Traits
 - Handlebars.js, SCSS, HTML and Twitter cards
 
-## Going Forward
+## Going Forward 🚀
 
 It was a wonderful experience participating in the IRR program and an absolute delight being mentored by Ashley. Now that the program is over 😔, I will continue learning, contributing and experimenting. Things I'm looking forward to:
 
@@ -53,9 +56,11 @@ It was a wonderful experience participating in the IRR program and an absolute d
     - Porting some projects I already worked on in different languages to Rust like writing a CHIP-8 emulator[^18], implement some webapps using Rocket, writing a firewall in `eBPF`[^19] and `BCC`[^20] tools, and more
     - Making themes for mdbook
 3. Contribute in the Community Team[^21] and Rustbridge[^22] and build a Rust community in my country
-4. Understand ownership better and learn advanced topics like Macros, Concurrency, Smart Pointers and more
+4. Continue working on Internationalisation in Rust projects
+5. Understand ownership better and learn advanced topics like Macros, Concurrency, Smart Pointers and more
 
-And yes, I am looking forward to attending Rust Belt Rust 2018 in Ann Arbor, Michigan and finally meet some fellow _rustaceans_ in person.
+
+And yes, I am looking forward to attending Rust Belt Rust 2018 in Ann Arbor, Michigan and finally meet Ashley and some fellow _rustaceans_ in person.
 
 There is so much to learn and I, for one am eager to discover what lies ahead.
 
