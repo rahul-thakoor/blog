@@ -67,8 +67,8 @@ There is so much to learn and I, for one am eager to discover what lies ahead.
 
 ## References
 
-[^1]: [Increasing Rust's Reach](http://reach.`rust-lang.org`/)
-[^2]: [IRR 2018 Participants](http://reach.`rust-lang.org`/2018/participants)
+[^1]: [Increasing Rust's Reach](http://reach.rust-lang.org/)
+[^2]: [IRR 2018 Participants](http://reach.rust-lang.org/2018/participants)
 [^3]: [My first instructable](https://www.instructables.com/id/ESP8266-ESP-12Standalone-Blynk-101/)
 [^4]: [Stack Overflow Developer Survey Results 2017](https://insights.stackoverflow.com/survey/2016#most-loved-dreaded-and-wanted)
 [^5]: [Discovery by Jorge Aparicio](https://rust-embedded.github.io/discovery/)
@@ -87,5 +87,5 @@ There is so much to learn and I, for one am eager to discover what lies ahead.
 [^18]: [Chip-8](https://en.wikipedia.org/wiki/CHIP-8)
 [^19]: [BPF & eBPF](https://en.wikipedia.org/wiki/Berkeley_Packet_Filter)
 [^20]: [BCC Tools](https://iovisor.github.io/bcc/)
-[^21]: [The Rust Team](https://www.rust-lang.org/en-US/team.html)
-[^22]: [Rustbridge](https://github.com/rustbridge/rustbridge.io)
+[^21]: [The Rust Team](https://www.rust-lang.org/governance/#teams)
+[^22]: [Rustbridge](https://github.com/rustbridge/team)
