@@ -93,6 +93,11 @@ paypal = "rahulthakoor"
     url = "page/rust_gpiozero"
     weight = 2
 
+[[menu.main]]
+    parent = "projects"
+    name = "Physical Computing With Rust"
+    url = "https://rahul-thakoor.github.io/physical-computing-rust/"
+    weight = 2
 # [[menu.main]]
 #     parent = "samples"
 #     name = "Big Image Sample"
