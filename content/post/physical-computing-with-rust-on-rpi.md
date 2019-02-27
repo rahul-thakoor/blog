@@ -3,7 +3,10 @@ title: "Physical Computing With Rust On Raspberry Pi"
 subtitle: "Use Rust to control LEDs, Buzzers, and more with the Raspberry Pi"
 image: /img/physical-computing-rust-example.png
 date: 2018-07-07T23:06:32+04:00
-draft: false
+tags:
+- rust
+- raspberry pi
+- physical computing
 ---
 
 A couple of months ago I released the `rust_gpiozero`[^1] crate. It is a port of the **GPIO Zero**[^2] library by the Raspberry Pi Foundation. The library provides a simple interface to control GPIO devices with a Raspberry Pi. Following this, recently ported the Raspberry Pi Foundation's **Physical Computing with Python**[^3] guide for Rust. 
