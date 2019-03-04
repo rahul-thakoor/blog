@@ -5,10 +5,11 @@ tags:
 - rust
 - mdbook
 - web
-author: Rahul
-categories: []
-layout: ''
-description: ''
+author: rahul
+categories:
+- blog
+layout: post
+description: 'Cache your mdBook contents '
 image: ''
 draft: true
 
