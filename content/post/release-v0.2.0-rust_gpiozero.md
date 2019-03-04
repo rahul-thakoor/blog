@@ -31,7 +31,7 @@ There are some API changes in existing components. Also, the `blinking` or `beep
 I started `rust_gpiozero` as an educational project and this release was very instructive:
 
 * I worked with threads in Rust which helped me better understand the borrowing, thread safety and closures. I worked with `std::sync::Arc`and `std::sync::Mutex`. However, I think there is still more to learn and discover.
-* I used `macro_rules!` for the first time. While previously using `traits`, I felt not being able to override functions and also have access to struct data implementing the traits a challenge. With `macro_rules!`, I organised common implementations accordingly and implemented them where needed. It also made the code "DRYer".
+* I used `macro_rules!` for the first time. While previously using `traits`, I felt not being able to override functions and also have access to struct data implementing the traits a challenge. With `macro_rules!`, I organised common implementations accordingly and implemented them where needed. It also made the code _"DRYer"_.
 * I got a better understanding of Pulse Width Modulation
 * I formatted the code with `rustfmt` and `clippy` ❤️
 
