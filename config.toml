@@ -20,7 +20,7 @@ googleAnalytics = "UA-118403602-1"
 
 [Params]
   #subtitle = "_________________________________________"
-  logo = "img/profile.png"
+  #logo = "img/profile.png"
   favicon = "img/favicon_r.ico"
   dateFormat = "January 2, 2006"
   commit = false
