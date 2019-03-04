@@ -43,3 +43,5 @@ fields:
   type: file
   hidden: false
   default: ''
+pages:
+- content/post/make-your-mdbook-work-offline.md
