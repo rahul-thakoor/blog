@@ -5,10 +5,10 @@ title = "rahul thakoor"
 #subtitle = "blog{OSS, Physical Computing, Data}"
 theme = "beautiful-hugo"
 metaDataFormat = "yaml"
-pygmentsStyle = "trac"
-pygmentsUseClasses = true
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
+# pygmentsStyle = "trac"
+# pygmentsUseClasses = true
+# pygmentsCodeFences = true
+# pygmentsCodefencesGuessSyntax = true
 #pygmentsUseClassic = true
 #pygmentOptions = "linenos=inline"
 #disqusShortname = "XXX"
