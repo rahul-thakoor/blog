@@ -1,7 +1,8 @@
-[submodule "themes/beautiful-hugo"]
-	path = themes/beautiful-hugo
-	url = https://github.com/rahul-thakoor/beautifulhugo.git
 [submodule "public"]
 	path = public
 	url = https://github.com/rahul-thakoor/rahul-thakoor.github.io.git
 	branch = master
+
+[submodule "themes/beautiful-hugo"]
+	path = themes/beautiful-hugo
+	url = https://github.com/rahul-thakoor/beautiful-hugo
