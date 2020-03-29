@@ -23,3 +23,5 @@ fields:
 - type: text
   name: author
   label: author
+pages:
+- content/post/using-no-standard-library-crates-with-webassembly.md
