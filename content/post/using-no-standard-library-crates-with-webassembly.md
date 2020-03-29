@@ -36,7 +36,7 @@ I've been experimenting with Webassembly lately and thought it would be a good e
 
 Thanks to the awesome work by James and the Rust Wasm team, it was quite trivial to implement this. I created the project using wasm-pack which is great for getting started with Rust + Webassembly work. The Embedded Graphics has great documentation on how to implement a display driver. I implemented the [DrawTarget trait](https://docs.rs/embedded-graphics/0.6.0/embedded_graphics/prelude/trait.DrawTarget.html) for drawing pixels on a `<canvas>` element which in turn the workflow was made great by the `wasm_bindgen`, `js-sys` and `web-sys crates`. 
 
-You can see a [demo](https://rahul-thakoor.github.io/embedded-graphics-web-simulator/) of the built project here.
+You can see a [demo](https://rahul-thakoor.github.io/embedded-graphics-web-simulator/) of the built project and find the[ source code on GitHub](https://github.com/rahul-thakoor/embedded-graphics-web-simulator). Feel free to make code reviews or contribute or notify me if I've made mistakes. 
 
 ## References
 
