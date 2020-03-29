@@ -9,6 +9,8 @@ tags:
 - rust
 - wasm
 author: ''
+subtitle: A Rust + Webassembly experiment using no_std crates
+image: ''
 draft: true
 
 ---
