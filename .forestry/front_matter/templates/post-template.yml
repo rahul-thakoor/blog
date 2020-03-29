@@ -1,0 +1,37 @@
+---
+label: Post Template
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: boolean
+  name: isCJKLanguage
+  label: isCJKLanguage
+- type: text
+  name: slug
+  label: slug
+- type: list
+  name: aliases
+  label: aliases
+- type: list
+  name: tags
+  label: tags
+- type: text
+  name: author
+  label: author
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: subtitle
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: image
+pages:
+- content/post/using-no-standard-library-crates-with-webassembly.md
