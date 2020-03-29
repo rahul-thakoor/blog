@@ -10,7 +10,8 @@ tags:
 - wasm
 author: ''
 subtitle: A Rust + Webassembly experiment using no_std crates
-image: ''
+image: "/img/embedded-graphics-web-simulator.jpg"
+
 
 ---
 When working with Rust + Webassembly, you might want to use some crates in your project. Not all crates work out of the box with Webassembly yet, especially those that rely on System Libraries, File I/O, Networking, etc. With proposals such as [WASI](https://wasi.dev/ "WebAssembly System Interface") or [WebAssembly Interface Types](https://github.com/WebAssembly/interface-types/blob/master/proposals/interface-types/Explainer.md "WebAssembly Interface Types"), these might work eventually but it isn't the case yet.

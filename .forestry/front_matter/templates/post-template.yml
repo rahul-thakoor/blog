@@ -29,9 +29,9 @@ fields:
     required: false
   label: subtitle
 - name: image
-  type: file
+  type: text
   config:
-    maxSize: 250
+    required: false
   label: image
 pages:
 - content/post/using-no-standard-library-crates-with-webassembly.md
