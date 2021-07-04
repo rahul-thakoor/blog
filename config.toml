@@ -14,6 +14,8 @@ metaDataFormat = "yaml"
 #disqusShortname = "XXX"
 googleAnalytics = "UA-118403602-1"
 
+[markup.goldmark.renderer]
+unsafe= true
 
 [permalinks]
   post = ":title/"
@@ -46,14 +48,14 @@ googleAnalytics = "UA-118403602-1"
 [Author]
 name = "Rahul Thakoor"
 #   website = "yourwebsite.com"
-email = "rahul.thakoor@gmail.com"
+# email = "rahul.thakoor@gmail.com"
 #   facebook = "username"
 #   googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
 github = "rahul-thakoor"
 #   gitlab = "username"
 twitter = "rahulthakoor"
 #   reddit = "username"
-linkedin = "rahul-thakoor-a50706138"
+# linkedin = "rahul-thakoor-a50706138"
 #   xing = "username"
 #   stackoverflow = "users/XXXXXXX/username"
 #   snapchat = "username"
